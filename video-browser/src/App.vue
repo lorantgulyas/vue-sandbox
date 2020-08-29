@@ -20,7 +20,7 @@ import SearchBar from "./components/SearchBar";
 import VideoDetail from "./components/VideoDetail";
 import VideoList from "./components/VideoList";
 
-const API_KEY = "YOUTUBE_API_KEY";
+import { API_KEY } from "./constant";
 
 export default {
   name: "App",

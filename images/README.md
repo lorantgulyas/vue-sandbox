@@ -1,6 +1,6 @@
-# video-browser
+# images
 
-Vue first project, Bootstrap, component composition, props and event emitters
+Vuex, Vue-router, Axios, Semantic-UI
 
 ## Project setup
 ```
