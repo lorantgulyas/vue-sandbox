@@ -1,7 +1,10 @@
 import api from '../../api/imgur';
+import qs from 'qs';
+
+import { router } from '../../main';
 
 const state = {
-  token: null,
+  token: window.localStorage.getItem('imgur_token'),
 };
 
 // NOTE: get values of state or calculate new values based on state
@@ -21,9 +24,16 @@ const actions = {
   logout: ({ commit }) => {
     // NOTE: first argument of commit() is the name of the mutation, further arguments are passed down to the mutation function
     commit('setToken', null)
+    window.localStorage.removeItem('imgur_token');
   },
   login: () => {
     api.login();
+  },
+  finalizeLogin: ({ commit }, hash) => {
+    const query = qs.parse(hash.replace('#', ''))
+    commit('setToken', query.access_token);
+    window.localStorage.setItem('imgur_token', query.access_token);
+    router.push('/')
   }
 };
 

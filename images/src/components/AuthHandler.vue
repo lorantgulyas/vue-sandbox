@@ -3,7 +3,13 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
-  name: 'AuthHandler'
-}
+  name: "AuthHandler",
+  created() {
+    this.finalizeLogin(window.location.hash);
+  },
+  methods: mapActions(['finalizeLogin']),
+};
 </script>

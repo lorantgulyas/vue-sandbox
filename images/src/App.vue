@@ -1,6 +1,8 @@
 <template>
   <div>
     <AppHeader></AppHeader>
+    <!-- NOTE: VueRouter will insert components here -->
+    <router-view></router-view>
   </div>
 </template>
 

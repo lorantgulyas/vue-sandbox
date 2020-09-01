@@ -2,6 +2,8 @@
 
 Vuex, Vue-router, Axios, Semantic-UI
 
+Practicing module design for Vuex (state, getters, mutations, actions)
+
 ## Project setup
 ```
 yarn install
